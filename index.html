@@ -3,15 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <title>irresistacalc online</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
 
     <h3>enter resistance for each of the appliances </h3>
 
-    <input type="number" placeholder="appliance 1" />
-    <input type="number" placeholder="appliance 2" />
-    <input type="number" placeholder="appliance 3" />
-    <input type="number" placeholder="appliance 4" />
+    <input type="number" min="0" step="1" value="0" id="app1" />
+    <input type="number" min="0" step="1" value="0" id="app2" />
+    <input type="number" min="0" step="1" value="0" id="app3" />
+    <input type="number" min="0" step="1" value="0" id="app4" />
 
+    <br>
+    <br>
+
+    <h4> how you wanna hook them up </h4>
+    <select id="conn-type">
+        <option value="series"> in series </option>
+        <option value="parallel"> in parrallel </option>
+    </select>
+
+    <button onclick="calc()"> calculate </button>
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
