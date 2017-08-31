@@ -1,4 +1,6 @@
 
+let resultDiv = document.getElementById("result");
+
 function calc () {
 
     let uno     = Number(document.getElementById("app1").value);
@@ -11,11 +13,14 @@ function calc () {
     switch (typeConn) {
 
         case "series":
+
             let seriesRes = uno + dos + tres + four;
             console.log("series, yo", seriesRes);
-            return seriesRes;
+            resultDiv.innerHTML = seriesRes;
+            break;
 
         case "parallel":
+
             if (uno == 0 && dos == 0 && tres == 0 && four == 0) break;
 
             if (uno <= 0)   uno   =   1;
@@ -23,10 +28,10 @@ function calc () {
             if (tres <= 0)  tres  =   1;
             if (four <= 0)  four  =   1; 
 
-
             let parallelRes = 1 / ((1/uno) + (1/dos) + (1/tres) + (1/four));
             console.log("parallel, yo", parallelRes);
-            return parallelRes;
+            resultDiv.innerHTML = parallelRes;
+            break;
 
         default:
             console.log("something else is there");
