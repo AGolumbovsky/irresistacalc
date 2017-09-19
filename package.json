@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/AGolumbovsky/irresistacalc/issues"
   },
-  "homepage": "https://github.com/AGolumbovsky/irresistacalc#readme"
+  "homepage": "https://github.com/AGolumbovsky/irresistacalc#readme",
+  "engines": {
+    "node": "6.9.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
