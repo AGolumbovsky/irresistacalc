@@ -1,4 +1,3 @@
-
 let resultDiv = document.getElementById("result");
 
 function calc () {
@@ -19,7 +18,7 @@ function calc () {
             console.log("series, yo", seriesRes);
 
             // display in the <div id="result">
-            resultDiv.innerHTML = seriesRes;
+            resultDiv.innerHTML = seriesRes, "<span>&#8486;</span>";
 
             break;
 
@@ -39,7 +38,7 @@ function calc () {
             console.log("parallel, yo", parallelRes);
 
             // display in the <div id="result">
-            resultDiv.innerHTML = parallelRes;
+            resultDiv.innerHTML = parallelRes, "<span>&#8486;</span>";
             
             break;
 
