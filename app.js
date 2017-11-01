@@ -1,4 +1,8 @@
+import testest from 'SpecialChars.js'
+
 let resultDiv = document.getElementById("result");
+
+testest();
 
 function calc () {
 
