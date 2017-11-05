@@ -1,8 +1,8 @@
-import testest from 'SpecialChars.js'
+// import testest from 'SpecialChars.js'
 
 let resultDiv = document.getElementById("result");
 
-testest();
+// testest();
 
 function calc () {
 
@@ -11,15 +11,20 @@ function calc () {
     let tres    = Number(document.getElementById("app3").value);
     let four    = Number(document.getElementById("app4").value);
 
-    let typeConn = document.getElementById("conn-type").value;
+    let typeConn = document.getElementById("conn-type").value;  
 
     switch (typeConn) {
 
         case "series":
-
+            // break if all the fields are zero
+            if (uno == 0 && dos == 0 && tres == 0 && four == 0) {
+                alert("you didn't enter anything, nothing to calculate, dummy");
+                break;
+            }
             // do the math for series connection
             let seriesRes = uno + dos + tres + four;
             console.log("series, yo", seriesRes);
+
 
             // display in the <div id="result">
             resultDiv.innerHTML = seriesRes, "<span>&#8486;</span>";
@@ -27,9 +32,11 @@ function calc () {
             break;
 
         case "parallel":
-
-            // break if all the fields are zero, no calc done
-            if (uno == 0 && dos == 0 && tres == 0 && four == 0) break;
+            // break if all the fielsd are zero
+            if (uno == 0 && dos == 0 && tres == 0 && four == 0) {
+                alert("you didn't enter anything, nothing to calculate, dummy");
+                break;
+            }
 
             // to avoid division by 0
             if (uno <= 0)   uno   =   1;
